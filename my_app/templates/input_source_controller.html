@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Input Source Controller</title>
+    </head>
+    <form>
+    	<ul>
+        	<li>
+            	<label for="name">hostname</label>
+            	<input type="text" name="hostname" placeholder="hostname" id="hostname" value="" />
+            	<input type="submit">
+        	</li>
+        	<li>
+            	<label for="name">username</label>
+            	<input type="text" name="username" placeholder="username" id="username" value="" />
+            	<input type="submit">
+        	</li>
+        	<li>
+            	<label for="name">password</label>
+            	<input type="text" name="password" placeholder="password" id="password" value="" />
+            	<input type="submit">
+        	</li>
+        	<li>
+            	<label for="name">account name</label>
+            	<input type="text" name="account_name" placeholder="account_name" id="account_name" value="" />
+            	<input type="submit">
+        	</li>
+    	</ul>
+  		<input type="submit" value="Submit" />
+	</form>
+    <body>
+    	<h1>source controller</h1>
+    	{% for article in articles %}
+        	<b><a href="{{article.link}}">{{article.title}}</a></b><br />
+        	<i>{{article.published}}</i><br />
+        	<p>{{article.summary}}</p>
+        	<hr />
+    	{% endfor %}
+	</body>
+</html>

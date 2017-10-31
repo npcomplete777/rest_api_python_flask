@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Tool Sub Menu 1</title>
+    </head>
+    <body>
+    	<h1>Select Sub Menu Option</h1>
+    		
+    	<h2>
+    		<ul>
+  				{%- for item in current_menu.children recursive -%}
+  				<li>
+    				<a href="{{ item.url}}">{{ item.text }}</a>
+    				{%- if item.children -%}
+    				<ul>
+      					{{ loop(item.children) }}
+    				</ul>
+    				{%- endif -%}
+  				</li>
+  				{%- endfor -%}
+			</ul>
+		</h2>
+	</body>
+</html>
